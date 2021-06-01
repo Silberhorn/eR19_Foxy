@@ -3,6 +3,7 @@
 	<name>eR_Foxy</name>
 	<comment></comment>
 	<projects>
+		<project>AssertionLibrary</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

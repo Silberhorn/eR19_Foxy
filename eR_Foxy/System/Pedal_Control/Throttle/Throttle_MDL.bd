@@ -1,0 +1,357 @@
+classType System.Pedal_Control.Throttle.Throttle_MDL
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active
+	{
+			connection_1, connection_4, connection_8, connection_10, connection_13, connection_48, connection_52, connection_59, connection_62
+		}
+	}
+absolute at (161, 31) {
+		inPin connection_3
+		outPin {
+			connection_2
+		}
+	}
+	simpleIdentifier tolerance_startLow at (21, 35) {
+		label at (0, -1)
+		inPin outPin {
+			connection_3
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	absolute at (161, 121) {
+		inPin connection_6
+		outPin {
+			connection_5
+		}
+	}
+	simpleIdentifier tolerance_endHigh at (21, 125) {
+		label at (0, -1)
+		inPin outPin {
+			connection_6
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier tolerance_endLow at (21, 95) {
+		label at (0, -1)
+		inPin outPin {
+			connection_7
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	absolute at (161, 61) {
+		inPin connection_12
+		outPin {
+			connection_9
+		}
+	}
+	absolute at (161, 91) {
+		inPin connection_7
+		outPin {
+			connection_11
+		}
+	}
+	simpleIdentifier tolerance_startHigh at (21, 65) {
+		label at (0, -1)
+		inPin outPin {
+			connection_12
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier tsLow at (251, 35) {
+		label at (0, -1)
+		inPin connection_2
+		outPin sequenceCall {
+			inPin connection_1
+		}
+	}
+	simpleIdentifier tsHigh at (251, 65) {
+		label at (0, -1)
+		inPin connection_9
+		outPin sequenceCall {
+			inPin connection_8
+		}
+	}
+	simpleIdentifier teLow at (251, 95) {
+		label at (0, -1)
+		inPin connection_11
+		outPin sequenceCall {
+			inPin connection_10
+		}
+	}
+	simpleIdentifier teHigh at (251, 125) {
+		label at (0, -1)
+		inPin connection_5
+		outPin sequenceCall {
+			inPin connection_4
+		}
+	}
+	simpleIdentifier reachedStart at (21, 185) {
+		label at (0, -1)
+		inPin outPin {
+			connection_14
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	literal Numeric "0.0" at (251, 283) size (49, 0) {
+		outPin {
+			connection_16
+		}
+	}
+	and at (141, 186) {
+		inPin connection_14 {
+			bendpoints (0, -1)
+		}
+		inPin connection_18 {
+			bendpoints (0, -20), (70, -20)
+		}
+		outPin {
+			connection_17
+		}
+	}
+	simpleIdentifier notReachedEnd at (21, 245) {
+		label at (0, -1)
+		inPin outPin {
+			connection_18
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier br_perc at (311, 225) {
+		label at (0, -1)
+		inPin outPin {
+			connection_20
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier returnValue at (391, 285) {
+		label at (0, -1)
+		inPin connection_16
+		outPin sequenceCall {
+			inPin connection_22 {
+				bendpoints (0, 30)
+			}
+		}
+	}
+	simpleIdentifier returnValue at (391, 225) {
+		label at (0, -1)
+		inPin connection_20
+		outPin sequenceCall {
+			inPin connection_21 {
+				bendpoints (90, 0)
+			}
+		}
+	}
+	ifElse at (241, 191) {
+		inPin connection_17
+		ifControlFlowOutPin {
+			connection_21
+		}
+		elseControlFlowOutPin {
+			connection_22
+		}
+		sequenceCall {
+			inPin connection_13
+		}
+	}
+	simpleIdentifier tsHigh at (61, 605) {
+		label at (0, -1)
+		inPin outPin {
+			connection_47
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	division at (541, 656) {
+		inPin connection_72 {
+			bendpoints (500, 0), (500, 110)
+		}
+		inPin connection_55
+		outPin {
+			connection_49
+		}
+	}
+	addition at (131, 436) {
+		inPin connection_64
+		inPin connection_76
+		outPin {
+			connection_50
+		}
+	}
+	addition at (131, 586) {
+		inPin connection_67 {
+			bendpoints (40, 0), (40, 260)
+		}
+		inPin connection_47
+		outPin {
+			connection_51
+		}
+	}
+	or at (341, 356) {
+		inPin connection_56 {
+			bendpoints (10, 0), (10, 30)
+		}
+		inPin connection_58 {
+			bendpoints (10, 0), (10, -60)
+		}
+		outPin {
+			connection_53
+		}
+	}
+	subtraction at (131, 666) {
+		inPin connection_70 {
+			bendpoints (20, 0), (20, 210)
+		}
+		inPin connection_65
+		outPin {
+			connection_55, connection_54
+		}
+	}
+	less at (271, 316) {
+		inPin connection_74 {
+			bendpoints (280, 0), (280, -230)
+		}
+		inPin connection_61 {
+			bendpoints (90, 0), (90, -1)
+		}
+		outPin {
+			connection_56
+		}
+	}
+	simpleIdentifier tsLow at (61, 345) {
+		label at (0, -1)
+		inPin outPin {
+			connection_57
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	greater at (271, 426) {
+		inPin connection_75 {
+			bendpoints (280, 0), (280, -120)
+		}
+		inPin connection_50
+		outPin {
+			connection_58
+		}
+	}
+	less at (541, 766) {
+		inPin connection_73 {
+			bendpoints (500, 0), (500, 220)
+		}
+		inPin connection_54 {
+			bendpoints (190, 0), (190, 110)
+		}
+		outPin {
+			connection_60
+		}
+	}
+	subtraction at (131, 326) {
+		inPin connection_66
+		inPin connection_57
+		outPin {
+			connection_61
+		}
+	}
+	greater at (541, 546) {
+		inPin connection_71
+		inPin connection_51 {
+			bendpoints (160, 0), (160, -30)
+		}
+		outPin {
+			connection_63
+		}
+	}
+	simpleIdentifier teHigh at (61, 435) {
+		label at (0, -1)
+		inPin outPin {
+			connection_64
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier teLow at (61, 685) {
+		label at (0, -1)
+		inPin outPin {
+			connection_65
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier reachedStart at (631, 555) {
+		label at (0, -1)
+		inPin connection_63 {
+			bendpoints (50, 0)
+		}
+		outPin sequenceCall {
+			inPin connection_62
+		}
+	}
+	simpleIdentifier hasErrorVal at (471, 365) {
+		label at (0, -1)
+		inPin connection_53 {
+			bendpoints (0, -1)
+		}
+		outPin sequenceCall {
+			inPin connection_52
+		}
+	}
+	simpleIdentifier br_perc at (631, 665) {
+		label at (0, -1)
+		inPin connection_49
+		outPin sequenceCall {
+			inPin connection_48
+		}
+	}
+	simpleIdentifier notReachedEnd at (631, 775) {
+		label at (0, -1)
+		inPin connection_60
+		outPin sequenceCall at (-10, -24) {
+			inPin connection_59
+		}
+	}
+	methodArgumentIdentifier calc.StartValue at (-39, 325) {
+		label at (0, -1)
+		outPin {
+			connection_67, connection_66
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.EndValue at (-39, 455) {
+		label at (0, -1)
+		outPin {
+			connection_76, connection_70
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier calc.RawInput at (-89, 545) {
+		label at (0, -1)
+		outPin {
+			connection_72, connection_73, connection_74, connection_75, connection_71
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+}

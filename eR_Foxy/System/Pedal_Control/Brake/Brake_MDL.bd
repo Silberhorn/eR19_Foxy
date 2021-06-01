@@ -1,0 +1,424 @@
+classType System.Pedal_Control.Brake.Brake_MDL
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active {
+			connection_50, connection_61
+		, connection_63, connection_69, connection_73, connection_101
+		, connection_103, connection_105, connection_107
+		}
+	}
+	methodBody getPercentage {
+		outPin {
+			connection_80
+		}
+	}
+	methodBody hasError {
+		outPin {
+			connection_82
+		}
+	}
+
+	
+	
+	
+	methodArgumentIdentifier calc.RawInput at  (-19, 255) {
+		label at (0, -1)
+		outPin {
+			connection_17, connection_37
+		, connection_41, connection_71, connection_10
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	subtraction at  (271, 36) {
+		inPin connection_11
+		inPin connection_109
+		outPin {
+			connection_9
+		}
+	}
+	less at  (411, 26) {
+		inPin connection_10 {
+			bendpoints (360, 0), 
+		(360, -230)
+		}
+		inPin connection_9 {
+			bendpoints (90, 0), (90, -1)
+		}
+		outPin {
+			connection_19
+		}
+	}
+	methodArgumentIdentifier calc.StartVlue at  (-19, 35) {
+		label at (0, -1)
+		outPin {
+			connection_28
+		, connection_11
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	
+	methodArgumentIdentifier calc.EndValue at  (-19, 165) {
+		label at (0, -1)
+		outPin {
+			connection_27
+		, connection_15
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	greater at  (411, 136) {
+		inPin connection_17 {
+			bendpoints (360, 0), 
+		(360, -120)
+		}
+		inPin connection_16 outPin {
+			connection_20
+		}
+	}
+	addition at  (271, 146) {
+		inPin connection_110
+		inPin connection_15
+		outPin {
+			connection_16
+		}
+	}
+	or at  (481, 66) {
+		inPin connection_19 {
+			bendpoints 
+		(10, 0), (10, 30)
+		}
+		inPin connection_20 {
+			bendpoints 
+		(10, 0), (10, -60)
+		}
+		outPin {
+			connection_62
+		}
+	}
+division at (681, 366) {
+		inPin connection_37 {
+			bendpoints (560, 0), (560, 110)
+		}
+		inPin connection_85
+		outPin {
+			connection_70
+		}
+	}
+	addition at  (271, 296) {
+		inPin connection_28 {
+			bendpoints (100, 0), 
+		(100, 260)
+		}
+		inPin connection_111
+		outPin {
+			connection_84
+		}
+	}
+	subtraction at  (271, 376) {
+		inPin connection_27 {
+			bendpoints 
+		
+		(70, 0), (70, 210)
+		}
+		inPin connection_112
+		outPin {
+			connection_86, connection_85
+		}
+	}
+	
+	
+	
+	greater at (681, 256) {
+		inPin connection_41
+		inPin connection_84 {
+			bendpoints (160, 0), 
+		(160, -30)
+		}
+		outPin {
+			connection_51
+		}
+	}
+	simpleIdentifier reachedStart at (771, 265) {
+		label at (0, -1)
+		inPin connection_51 {
+			bendpoints (50, 0)
+		}
+		outPin sequenceCall {
+			inPin connection_50
+		}
+	}
+	simpleIdentifier hasErrorVal at (611, 75) {
+		label at (0, -1)
+		inPin connection_62 {
+			bendpoints (0, -1)
+		}
+		outPin sequenceCall {
+			inPin connection_61
+		}
+	}
+	ifElse at (271, 561) {
+		inPin connection_77 ifControlFlowOutPin {
+			connection_78
+		}
+		elseControlFlowOutPin {
+			connection_65
+		}
+		sequenceCall {
+			inPin connection_63
+		}
+	}
+	simpleIdentifier reachedStart at  (51, 555) {
+		label at (0, -1)
+		inPin outPin {
+			connection_75
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier returnValue at (421, 655) {
+		label at (0, -1)
+		inPin connection_66
+		outPin sequenceCall {
+			inPin connection_65 {
+				bendpoints (0, 30)
+			}
+		}
+	}
+	literal Numeric "0.0" at (281, 653) size (49, 0) {
+		outPin {
+			connection_66
+		}
+	}
+	simpleIdentifier br_perc at (771, 375) {
+		label at (0, -1)
+		inPin connection_70
+		outPin sequenceCall {
+			inPin connection_69
+		}
+	}
+	less at (681, 476) {
+		inPin connection_71 {
+			bendpoints (560, 0), (560, 220)
+		}
+		inPin connection_86 {
+			bendpoints (190, 0), 
+		(190, 110)
+		}
+		outPin {
+			connection_74
+		}
+	}
+	simpleIdentifier notReachedEnd at (771, 485) {
+		label at (0, -1)
+		inPin connection_74
+		outPin sequenceCall at (-10, -24) {
+			inPin connection_73
+		}
+	}
+	simpleIdentifier notReachedEnd at (51, 615) {
+		label at (0, -1)
+		inPin outPin {
+			connection_76
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	and at  (171, 556) {
+		inPin connection_75 {
+			bendpoints 
+		(0, -1)
+		}
+		inPin connection_76 {
+			bendpoints 
+		(0, -20), (70, -20)
+		}
+		outPin {
+			connection_77
+		}
+	}
+	simpleIdentifier br_perc at (341, 595) {
+		label at (0, -1)
+		inPin outPin {
+			connection_79
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier returnValue at (421, 595) {
+		label at (0, -1)
+		inPin connection_79
+		outPin sequenceCall {
+			inPin connection_78 {
+				bendpoints (90, 0)
+			}
+		}
+	}
+	return at (751, 645) {
+		label at (0, 0)
+		inPin connection_81 {
+			bendpoints (60, 0)
+		}
+		sequenceCall {
+			inPin connection_80
+		}
+	}
+	simpleIdentifier returnValue at (641, 645) {
+		label at (0, -1)
+		inPin outPin {
+			connection_81
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	return at (751, 595) {
+		label at (0, 0)
+		inPin connection_83 {
+			bendpoints (60, 0)
+		}
+		sequenceCall {
+			inPin connection_82
+		}
+	}
+	simpleIdentifier hasErrorVal at (641, 595) {
+		label at (0, -1)
+		inPin outPin {
+			connection_83
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+simpleIdentifier tolerance_startLow at (-369, 475) {
+		label at (0, -1)
+		inPin outPin {
+			connection_100
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier tolerance_startHigh at (-369, 505) {
+		label at (0, -1)
+		inPin outPin {
+			connection_99
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier tolerance_endLow at (-369, 535) {
+		label at (0, -1)
+		inPin outPin {
+			connection_98
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier tolerance_endHigh at (-369, 565) {
+		label at (0, -1)
+		inPin outPin {
+			connection_97
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	absolute at (-229, 471) {
+		inPin connection_100
+		outPin {
+			connection_102
+		}
+	}
+	absolute at (-229, 501) {
+		inPin connection_99
+		outPin {
+			connection_104
+		}
+	}
+	absolute at (-229, 531) {
+		inPin connection_98
+		outPin {
+			connection_106
+		}
+	}
+	absolute at (-229, 561) {
+		inPin connection_97
+		outPin {
+			connection_108
+		}
+	}
+	simpleIdentifier tsLow at (-139, 475) {
+		label at (0, -1)
+		inPin connection_102
+		outPin sequenceCall {
+			inPin connection_101
+		}
+	}
+	simpleIdentifier tsHigh at (-139, 505) {
+		label at (0, -1)
+		inPin connection_104
+		outPin sequenceCall {
+			inPin connection_103
+		}
+	}
+	simpleIdentifier teLow at (-139, 535) {
+		label at (0, -1)
+		inPin connection_106
+		outPin sequenceCall {
+			inPin connection_105
+		}
+	}
+	simpleIdentifier teHigh at (-139, 565) {
+		label at (0, -1)
+		inPin connection_108
+		outPin sequenceCall {
+			inPin connection_107
+		}
+	}
+	simpleIdentifier tsLow at (201, 55) {
+		label at (0, -1)
+		inPin outPin {
+			connection_109
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier teHigh at (201, 145) {
+		label at (0, -1)
+		inPin outPin {
+			connection_110
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier tsHigh at (201, 315) {
+		label at (0, -1)
+		inPin outPin {
+			connection_111
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier teLow at (201, 395) {
+		label at (0, -1)
+		inPin outPin {
+			connection_112
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+}
