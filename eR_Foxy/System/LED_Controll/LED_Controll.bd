@@ -1,0 +1,304 @@
+classType System.LED_Controll.LED_Controll
+blockdiagramSpecification Main {
+	methodBody getState {
+		outPin active
+	{
+			connection_50, connection_5, connection_7, connection_13, connection_19, connection_1
+		}
+	}
+simpleIdentifier timeThres at (211, 355) {
+		label at (0, -1)
+		inPin connection_6
+		outPin sequenceCall {
+			inPin connection_5
+		}
+	}
+	simpleIdentifier timeInteg at (11, 465) {
+		label at (0, -1)
+		inPin outPin {
+			connection_49
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier Mode at (11, 15) {
+		label at (0, -1)
+		inPin outPin {
+			connection_15, connection_21, connection_9
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	return at (671, 485) {
+		label at (0, 0)
+		inPin connection_47
+		sequenceCall {
+			inPin connection_1
+		}
+	}
+	simpleIdentifier Frequency at (11, 385) {
+		label at (0, -1)
+		inPin outPin {
+			connection_4
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier DEF_1 at (21, 345) {
+		label at (0, -1)
+		outPin {
+			connection_3
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	division at (151, 346) {
+		inPin connection_3 {
+			bendpoints (0, -1)
+		}
+		inPin connection_4 {
+			bendpoints (0, -21)
+		}
+		outPin {
+			connection_6
+		}
+	}
+	if at (271, 21) {
+		inPin connection_8
+		ifControlFlowOutPin {
+			connection_11
+		}
+		sequenceCall {
+			inPin connection_7
+		}
+	}
+	equal at (201, 16) {
+		inPin connection_9
+		inPin connection_10
+		outPin {
+			connection_8
+		}
+	}
+	simpleIdentifier off at (131, 35) {
+		label at (0, -1)
+		outPin {
+			connection_10
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier State at (571, 45) {
+		label at (0, -1)
+		inPin connection_12
+		outPin sequenceCall {
+			inPin connection_11
+		}
+	}
+	literal Boolean "false" at (501, 43) size (49, 0) {
+		outPin {
+			connection_12
+		}
+	}
+	if at (271, 91) {
+		inPin connection_14
+		ifControlFlowOutPin {
+			connection_17
+		}
+		sequenceCall {
+			inPin connection_13
+		}
+	}
+	equal at (201, 86) {
+		inPin connection_15 {
+			bendpoints (60, 0), (60, 70)
+		}
+		inPin connection_16
+		outPin {
+			connection_14
+		}
+	}
+	simpleIdentifier on at (131, 105) {
+		label at (0, -1)
+		outPin {
+			connection_16
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier State at (571, 115) {
+		label at (0, -1)
+		inPin connection_18
+		outPin sequenceCall {
+			inPin connection_17
+		}
+	}
+	literal Boolean "true" at (501, 113) size (49, 0) {
+		outPin {
+			connection_18
+		}
+	}
+	equal at (201, 156) {
+		inPin connection_21 {
+			bendpoints (60, 0), (60, 140)
+		}
+		inPin connection_22
+		outPin {
+			connection_20
+		}
+	}
+	if at (271, 161) {
+		inPin connection_20
+		ifControlFlowOutPin {
+			connection_36
+		}
+		sequenceCall {
+			inPin connection_19
+		}
+	}
+	simpleIdentifier blink at (131, 175) {
+		label at (0, -1)
+		outPin {
+			connection_22
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	greaterOrEqual at (201, 236) {
+		inPin connection_26
+		inPin connection_25
+		outPin {
+			connection_37
+		}
+	}
+	simpleIdentifier timeThres at (121, 255) {
+		label at (0, -1)
+		inPin outPin {
+			connection_25
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier timeInteg at (121, 235) {
+		label at (0, -1)
+		inPin outPin {
+			connection_26
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	ifElse at (431, 321) {
+		inPin connection_38
+		ifControlFlowOutPin {
+			connection_43
+		}
+		elseControlFlowOutPin {
+			connection_41
+		}
+		sequenceCall {
+			inPin connection_27 {
+				bendpoints (10, 0), (10, 60)
+			}
+		}
+	}
+	simpleIdentifier State at (571, 345) {
+		label at (0, -1)
+		inPin connection_44
+		outPin sequenceCall {
+			inPin connection_43
+		}
+	}
+	simpleIdentifier State at (571, 405) {
+		label at (0, -1)
+		inPin connection_42
+		outPin sequenceCall {
+			inPin connection_41 {
+				bendpoints (0, 30)
+			}
+		}
+	}
+	if at (351, 241) {
+		inPin connection_37
+		ifControlFlowOutPin {
+			connection_27, connection_45
+		}
+		sequenceCall {
+			inPin connection_36 {
+				bendpoints (10, 0), (10, 60)
+			}
+		}
+	}
+	simpleIdentifier State at (351, 325) {
+		label at (0, -1)
+		inPin outPin {
+			connection_38
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	literal Boolean "true" at (501, 403) size (49, 0) {
+		outPin {
+			connection_42
+		}
+	}
+	literal Boolean "false" at (501, 343) size (49, 0) {
+		outPin {
+			connection_44
+		}
+	}
+	simpleIdentifier timeInteg at (571, 265) {
+		label at (0, -1)
+		inPin connection_46
+		outPin sequenceCall {
+			inPin connection_45
+		}
+	}
+	literal Numeric "0.0" at (501, 263) size (49, 0) {
+		outPin {
+			connection_46
+		}
+	}
+	simpleIdentifier State at (571, 485) {
+		label at (0, -1)
+		inPin outPin {
+			connection_47
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier deltaT at (11, 425) {
+		label at (0, -1)
+		inPin outPin {
+			connection_48
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier timeInteg at (211, 435) {
+		label at (0, -1)
+		inPin connection_51
+		outPin sequenceCall {
+			inPin connection_50
+		}
+	}
+	addition at (151, 426) {
+		inPin connection_48
+		inPin connection_49 {
+			bendpoints (0, -20)
+		}
+		outPin {
+			connection_51
+		}
+	}
+}
