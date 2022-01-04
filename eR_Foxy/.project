@@ -3,6 +3,7 @@
 	<name>eR_Foxy</name>
 	<comment></comment>
 	<projects>
+		<project>SystemLib</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

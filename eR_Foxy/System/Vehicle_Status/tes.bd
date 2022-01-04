@@ -1,0 +1,25 @@
+classType System.Vehicle_Status.tes
+blockdiagramSpecification Main {
+	methodBody calc {
+		outPin active
+	{
+			connection_1
+		}
+	}
+simpleIdentifier SystemLib.Miscellaneous.DeltaTimeService.deltaT at (681, 165) {
+		label at (0, -1)
+		inPin outPin {
+			connection_2
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier v at (811, 165) {
+		label at (0, -1)
+		inPin connection_2
+		outPin sequenceCall {
+			inPin connection_1
+		}
+	}
+}
