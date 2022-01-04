@@ -1,16 +1,15 @@
 package UnitTests.LED_Controll;
 
 import assertLib.Assert;
-import System.LED_Controll.LED_Controll;
 
 static class LED_Control_UT{
 	
 	
-	
+	//LED_Controll test = LED_Controll.; 
 	@Test
 	public void mode_Test()
 	{
-		Assert.assertEqual();
+		//N/A
 	}
 	
 }
