@@ -17,10 +17,10 @@
         <outgoingTransitions xmi:id="_rjdG021nEeyskIveeds70Q" specification="mode == LED_Mode.on" target="_n5WT4G1kEeyskIveeds70Q"/>
         <outgoingTransitions xmi:id="_rjdG7G1nEeyskIveeds70Q" specification="mode == LED_Mode.off" target="_fnGJ4m1kEeyskIveeds70Q"/>
         <regions xmi:id="_qQ4roW1nEeyskIveeds70Q" name="inner region">
-          <vertices xsi:type="sgraph:State" xmi:id="_oVMbAG1nEeyskIveeds70Q" specification="entry{&#xD;&#xA;&#x9;LED = false;&#xD;&#xA;} &#xD;&#xA;static{&#xD;&#xA;&#x9;timer = timer + DeltaTimeService.deltaT;&#xD;&#xA;}&#xD;&#xA;exit{&#xD;&#xA;&#x9;timer = 0.0;&#xD;&#xA;}" name="BlinkOff" incomingTransitions="_pkKIgG1nEeyskIveeds70Q">
+          <vertices xsi:type="sgraph:State" xmi:id="_oVMbAG1nEeyskIveeds70Q" specification="entry{&#xD;&#xA;&#x9;LED = false;&#xD;&#xA;&#x9;LED_Off_Time = 1.0/frequency;&#xD;&#xA;} &#xD;&#xA;static{&#xD;&#xA;&#x9;timer = timer + DeltaTimeService.deltaT;&#xD;&#xA;}&#xD;&#xA;exit{&#xD;&#xA;&#x9;timer = 0.0;&#xD;&#xA;}" name="BlinkOff" incomingTransitions="_pkKIgG1nEeyskIveeds70Q">
             <outgoingTransitions xmi:id="_CpAGAG1oEeyskIveeds70Q" specification="timer >= LED_Off_Time" target="_d-EPIG1nEeyskIveeds70Q"/>
           </vertices>
-          <vertices xsi:type="sgraph:State" xmi:id="_d-EPIG1nEeyskIveeds70Q" specification="entry{&#xD;&#xA;&#x9;LED = true;&#xD;&#xA;} &#xD;&#xA;static{&#xD;&#xA;&#x9;timer = timer + DeltaTimeService.deltaT;&#xD;&#xA;}&#xD;&#xA;exit{&#xD;&#xA;&#x9;timer = 0.0;&#xD;&#xA;}" name="BlinkOn" incomingTransitions="_91mocG1nEeyskIveeds70Q _CpAGAG1oEeyskIveeds70Q">
+          <vertices xsi:type="sgraph:State" xmi:id="_d-EPIG1nEeyskIveeds70Q" specification="entry{&#xD;&#xA;&#x9;LED = true;&#xD;&#xA;&#x9;LED_On_Time = 1.0/frequency;&#xD;&#xA;} &#xD;&#xA;static{&#xD;&#xA;&#x9;timer = timer + DeltaTimeService.deltaT;&#xD;&#xA;}&#xD;&#xA;exit{&#xD;&#xA;&#x9;timer = 0.0;&#xD;&#xA;}" name="BlinkOn" incomingTransitions="_91mocG1nEeyskIveeds70Q _CpAGAG1oEeyskIveeds70Q">
             <outgoingTransitions xmi:id="_pkKIgG1nEeyskIveeds70Q" specification="timer >= LED_On_Time" target="_oVMbAG1nEeyskIveeds70Q"/>
           </vertices>
           <vertices xsi:type="sgraph:Entry" xmi:id="_9IkjUG1nEeyskIveeds70Q">
