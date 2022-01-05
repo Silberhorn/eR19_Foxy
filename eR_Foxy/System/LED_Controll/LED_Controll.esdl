@@ -2,16 +2,34 @@ package System.LED_Controll;
 import SystemLib.Miscellaneous.DeltaTimeService;
 
 class LED_Controll {
-	@set
-	@get
 	private LED_Mode mode = LED_Mode.off;
-	@get
 	boolean LED = false;
 	real timer = 0.0;
-	@set
-	private real frequency = 0.0;
+	private real frequency = 10000.0;
 	real LED_On_Time = 0.0;
 	real LED_Off_Time = 0.0;
+
+	public LED_Mode getMode()
+	{
+		return mode;
+	}
+	
+	public boolean getLED()
+	{
+		return LED;
+	}
+
+	public void setFrequency(real x)
+	{
+		frequency = x;
+	}
+
+	public void setMode(LED_Mode x)
+	{
+		mode = x;
+	}
+
+
 
 	@generated("statemachine", "000000")
 	public void lED_ControllStatemachineTrigger() triggers LED_ControllStatemachine;
