@@ -2,11 +2,11 @@ package System.Fan_Control;
 import System.Percentage;
 
 class FanControll {
-	characteristic real temp_low = 0.0;
-	characteristic real temp_high = 0.0;
+	characteristic real temp_low = -30.0;
+	characteristic real temp_high = 50.0;
 	real temp_range;
 	real temp_high_heuristic;
-	characteristic real temp_high_heur_fact = 0.0;
+	characteristic real temp_high_heur_fact = 0.9;
 	real returnVal;
 	boolean toggleHeuristicHigh;
 

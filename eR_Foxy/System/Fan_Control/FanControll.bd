@@ -62,7 +62,7 @@ simpleIdentifier temp_low at (71, 55) {
 			connection_8
 		}
 	}
-	simpleIdentifier temp_high_heur_fact at (71, 175) {
+	simpleIdentifier temp_high_heur_fact at  (71, 175) {
 		label at (0, -1)
 		outPin {
 			connection_10
