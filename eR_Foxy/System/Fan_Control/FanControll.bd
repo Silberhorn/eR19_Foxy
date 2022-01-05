@@ -1,0 +1,279 @@
+classType System.Fan_Control.FanControll
+blockdiagramSpecification Main {
+	methodBody fanSpeed {
+		outPin active
+	{
+			connection_4, connection_7, connection_26, connection_34, connection_38, connection_20
+		}
+	}
+simpleIdentifier temp_low at (71, 55) {
+		label at (0, -1)
+		outPin {
+			connection_1
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier temp_high at (71, 135) {
+		label at (0, -1)
+		outPin {
+			connection_6, connection_2
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier temp_range at (331, 65) {
+		label at (0, -1)
+		inPin connection_5
+		outPin sequenceCall {
+			inPin connection_4
+		}
+	}
+	subtraction at (211, 56) {
+		inPin connection_1
+		inPin connection_2 {
+			bendpoints (60, 0), (60, -60)
+		}
+		outPin {
+			connection_3
+		}
+	}
+	absolute at (261, 61) {
+		inPin connection_3
+		outPin {
+			connection_5
+		}
+	}
+	simpleIdentifier temp_high_heuristic at (331, 145) {
+		label at (0, -1)
+		inPin connection_8
+		outPin sequenceCall {
+			inPin connection_7
+		}
+	}
+	multiplication at (211, 136) {
+		inPin connection_6
+		inPin connection_10 {
+			bendpoints (80, 0), (80, -20)
+		}
+		outPin {
+			connection_8
+		}
+	}
+	simpleIdentifier temp_high_heur_fact at (71, 175) {
+		label at (0, -1)
+		outPin {
+			connection_10
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	methodArgumentIdentifier fanSpeed.currTemp at (21, 245) {
+		label at (0, -1)
+		outPin {
+			connection_28, connection_32, connection_11
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	subtraction at (211, 246) {
+		inPin connection_11
+		inPin connection_12
+		outPin {
+			connection_17
+		}
+	}
+	simpleIdentifier temp_low at (151, 265) {
+		label at (0, -1)
+		outPin {
+			connection_12
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	division at (441, 266) {
+		inPin connection_18
+		inPin connection_16
+		outPin {
+			connection_22
+		}
+	}
+	simpleIdentifier temp_range at (331, 285) {
+		label at (0, -1)
+		inPin outPin {
+			connection_16
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	minimum at (281, 256) {
+		inPin connection_17
+		inPin connection_19 {
+			bendpoints (0, -40)
+		}
+		outPin {
+			connection_18
+		}
+	}
+	literal Numeric "0.0" at (211, 313) size (49, 0) {
+		outPin {
+			connection_19
+		}
+	}
+	simpleIdentifier returnVal at (601, 825) {
+		label at (0, -1)
+		inPin outPin {
+			connection_21
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	return at (691, 825) {
+		label at (0, 0)
+		inPin connection_21
+		sequenceCall {
+			inPin connection_20
+		}
+	}
+	literal Numeric "100.0" at (441, 313) size (49, 0) {
+		outPin {
+			connection_23
+		}
+	}
+	multiplication at (531, 276) {
+		inPin connection_22
+		inPin connection_23 {
+			bendpoints (40, 0)
+		}
+		outPin {
+			connection_41
+		}
+	}
+	if at (281, 381) {
+		inPin connection_27
+		ifControlFlowOutPin {
+			connection_30
+		}
+		sequenceCall {
+			inPin connection_26
+		}
+	}
+	greaterOrEqual at (211, 376) {
+		inPin connection_28 {
+			bendpoints (40, 0), (40, 130)
+		}
+		inPin connection_29
+		outPin {
+			connection_27
+		}
+	}
+	simpleIdentifier temp_high at (151, 395) {
+		label at (0, -1)
+		outPin {
+			connection_29
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier toggleHeuristicHigh at (411, 405) {
+		label at (0, -1)
+		inPin connection_31
+		outPin sequenceCall {
+			inPin connection_30
+		}
+	}
+	literal Boolean "true" at (341, 403) size (49, 0) {
+		outPin {
+			connection_31
+		}
+	}
+	lessOrEqual at (211, 456) {
+		inPin connection_32 {
+			bendpoints (40, 0), (40, 210)
+		}
+		inPin connection_33
+		outPin {
+			connection_35
+		}
+	}
+	simpleIdentifier temp_high_heuristic at (141, 475) {
+		label at (0, -1)
+		inPin outPin {
+			connection_33
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	if at (281, 461) {
+		inPin connection_35
+		ifControlFlowOutPin {
+			connection_36
+		}
+		sequenceCall {
+			inPin connection_34
+		}
+	}
+	simpleIdentifier toggleHeuristicHigh at (411, 485) {
+		label at (0, -1)
+		inPin connection_37
+		outPin sequenceCall {
+			inPin connection_36
+		}
+	}
+	literal Boolean "false" at (341, 483) size (49, 0) {
+		outPin {
+			connection_37
+		}
+	}
+	ifElse at (611, 181) {
+		inPin connection_39
+		ifControlFlowOutPin {
+			connection_42
+		}
+		elseControlFlowOutPin {
+			connection_40
+		}
+		sequenceCall {
+			inPin connection_38
+		}
+	}
+	simpleIdentifier toggleHeuristicHigh at (461, 185) {
+		label at (0, -1)
+		inPin outPin {
+			connection_39
+		}
+		sequenceCall {
+			inPin
+		}
+	}
+	simpleIdentifier returnVal at (721, 285) {
+		label at (0, -1)
+		inPin connection_41
+		outPin sequenceCall {
+			inPin connection_40 {
+				bendpoints (0, 50)
+			}
+		}
+	}
+	literal Numeric "100.0" at (661, 203) size (49, 0) {
+		outPin {
+			connection_43
+		}
+	}
+	simpleIdentifier returnVal at (721, 205) {
+		label at (0, -1)
+		inPin connection_43
+		outPin sequenceCall {
+			inPin connection_42
+		}
+	}
+}
